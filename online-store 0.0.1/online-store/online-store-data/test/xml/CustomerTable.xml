@@ -1,0 +1,37 @@
+<by.grsu.edu.dimav.onlinestore.dao.table.CustomerTable>
+  <rows>
+    <by.grsu.edu.dimav.onlinestore.entities.Customer>
+      <orders class="linked-list"/>
+      <basket class="linked-list"/>
+      <contactNumber>37529684615</contactNumber>
+      <email>emailtest</email>
+      <login>Vol40K</login>
+      <name></name>
+      <secondName></secondName>
+      <lastName></lastName>
+      <id>1</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Customer>
+    <by.grsu.edu.dimav.onlinestore.entities.Customer>
+      <orders class="linked-list"/>
+      <basket class="linked-list"/>
+      <contactNumber>37529684615</contactNumber>
+      <email>emailtest</email>
+      <login>Vol40K</login>
+      <name></name>
+      <secondName></secondName>
+      <lastName></lastName>
+      <id>2</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Customer>
+    <by.grsu.edu.dimav.onlinestore.entities.Customer>
+      <orders class="linked-list"/>
+      <basket class="linked-list"/>
+      <contactNumber>00000000000</contactNumber>
+      <email>emailtest</email>
+      <login>Vol40K</login>
+      <name></name>
+      <secondName></secondName>
+      <lastName></lastName>
+      <id>3</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Customer>
+  </rows>
+</by.grsu.edu.dimav.onlinestore.dao.table.CustomerTable>
