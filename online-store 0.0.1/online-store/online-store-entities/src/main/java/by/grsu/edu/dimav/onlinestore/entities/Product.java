@@ -10,6 +10,13 @@ public class Product extends Entity {
 	public Product() {
 		
 	}
+	
+	public Product(Product product) {
+		super(product);
+		this.productName = product.productName;
+		this.description = product.description;
+		this.quantityInStock = product.quantityInStock;
+	}
 
 	public String getProductName() {
 		return productName;

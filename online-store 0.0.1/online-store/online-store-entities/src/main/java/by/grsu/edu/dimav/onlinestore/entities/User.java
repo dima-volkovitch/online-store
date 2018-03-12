@@ -3,7 +3,7 @@ package by.grsu.edu.dimav.onlinestore.entities;
 import static by.grsu.edu.dimav.onlinestore.utils.StringWorker.uniteStrings;
 
 public abstract class User extends Entity{
-	private Integer contactNumber;
+	private String contactNumber;
 	
 	private String email;
 	
@@ -18,14 +18,27 @@ public abstract class User extends Entity{
 	private String lastName;
 	
 	public User() {
-		
+		this.name = "";
+		this.secondName = "";
+		this.lastName = "";
+	}
+	
+	public User(User user) {
+		super(user);
+		this.contactNumber = user.contactNumber;
+		this.email = user.email;
+		this.login = user.login;
+		this.password = user.password;
+		this.name = user.name;
+		this.secondName = user.secondName;
+		this.lastName = user.lastName;
 	}
 
-	public Integer getContactNumber() {
+	public String getContactNumber() {
 		return contactNumber;
 	}
 
-	public void setContactNumber(Integer contactNumber) {
+	public void setContactNumber(String contactNumber) {
 		this.contactNumber = contactNumber;
 	}
 

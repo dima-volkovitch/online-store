@@ -1,0 +1,20 @@
+<by.grsu.edu.dimav.onlinestore.dao.table.ProductTable>
+  <rows>
+    <by.grsu.edu.dimav.onlinestore.entities.Product>
+      <description>some test description</description>
+      <id>1</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Product>
+    <by.grsu.edu.dimav.onlinestore.entities.Product>
+      <description>some test description</description>
+      <id>2</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Product>
+    <by.grsu.edu.dimav.onlinestore.entities.Product>
+      <description>some test description</description>
+      <id>3</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Product>
+    <by.grsu.edu.dimav.onlinestore.entities.Product>
+      <description>00000000000</description>
+      <id>4</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Product>
+  </rows>
+</by.grsu.edu.dimav.onlinestore.dao.table.ProductTable>
