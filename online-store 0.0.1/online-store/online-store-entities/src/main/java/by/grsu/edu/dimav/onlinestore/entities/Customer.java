@@ -6,8 +6,11 @@ import java.util.List;
 public class Customer extends User {
 	private List<Order> orders;
 	
-	private Customer() {
+	private List<Product> basket;
+	
+	public Customer() {
 		this.orders = new LinkedList<Order>();
+		this.setBasket(new LinkedList<Product>());
 	}
 
 	public List<Order> getOrders() {
@@ -24,5 +27,21 @@ public class Customer extends User {
 	
 	public boolean removeOrder(Order o) {
 		return orders.remove(o);
+	}
+
+	public List<Product> getBasket() {
+		return basket;
+	}
+
+	public void setBasket(List<Product> basket) {
+		this.basket = basket;
+	}
+	
+	public void addProduct(Product p) {
+		basket.add(p);
+	}
+	
+	public boolean removeProduct(Product p) {
+		return basket.remove(p);
 	}
 }

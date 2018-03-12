@@ -1,5 +1,7 @@
 package by.grsu.edu.dimav.onlinestore.entities;
 
+import static by.grsu.edu.dimav.onlinestore.utils.StringWorker.uniteStrings;
+
 public class Order extends Entity {
 	private Customer customer;
 	
@@ -51,11 +53,13 @@ public class Order extends Entity {
 	
 	@Override
 	public int hashCode() {
-		//finish it
+		Integer customerHashCode = this.customer.hashCode();
+		Integer productHashCode = this.product.hashCode();
+		return uniteStrings(customerHashCode, productHashCode).hashCode();
 	}
 	
 	@Override
 	public String toString() {
-		//finish it
+		return uniteStrings(customer, DASH, product);
 	}
 }

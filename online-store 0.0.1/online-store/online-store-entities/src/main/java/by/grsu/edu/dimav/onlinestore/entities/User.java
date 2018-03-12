@@ -1,5 +1,7 @@
 package by.grsu.edu.dimav.onlinestore.entities;
 
+import static by.grsu.edu.dimav.onlinestore.utils.StringWorker.uniteStrings;
+
 public abstract class User extends Entity{
 	private Integer contactNumber;
 	
@@ -14,6 +16,10 @@ public abstract class User extends Entity{
 	private String secondName;
 	
 	private String lastName;
+	
+	public User() {
+		
+	}
 
 	public Integer getContactNumber() {
 		return contactNumber;
@@ -86,6 +92,6 @@ public abstract class User extends Entity{
 	
 	@Override
 	public String toString() {
-		return contactNumber.toString();
+		return uniteStrings(login, DASH, contactNumber.toString());
 	}
 }

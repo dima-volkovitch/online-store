@@ -1,7 +1,7 @@
 package by.grsu.edu.dimav.onlinestore.entities;
 
 public class Product extends Entity {
-	private String orderName;
+	private String productName;
 	
 	private String description;
 	
@@ -10,15 +10,15 @@ public class Product extends Entity {
 	public Product() {
 		
 	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
 	
-	public String getOrderName() {
-		return orderName;
-	}
-
-	public void setOrderName(String orderName) {
-		this.orderName = orderName;
-	}
-
 	public String getDescription() {
 		return description;
 	}
@@ -40,16 +40,16 @@ public class Product extends Entity {
 		if(!(o instanceof Order)) {
 			return false;
 		}
-		return (this.orderName == ((Order)o).getOrderName());
+		return (this.productName == ((Product)o).getProductName());
 	}
 	
 	@Override
 	public int hashCode() {
-		return this.orderName.hashCode();
+		return this.productName.hashCode();
 	}
 	
 	@Override
 	public String toString() {
-		return this.orderName + quantityInStock;
+		return this.productName + quantityInStock;
 	}
 }
