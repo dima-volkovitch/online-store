@@ -12,6 +12,12 @@ public class Customer extends User {
 		this.orders = new LinkedList<Order>();
 		this.setBasket(new LinkedList<Product>());
 	}
+	
+	public Customer(Customer customer) {
+		super(customer);
+		this.orders = customer.orders;
+		this.basket = customer.basket;
+	}
 
 	public List<Order> getOrders() {
 		return orders;

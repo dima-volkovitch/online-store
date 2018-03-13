@@ -4,6 +4,14 @@ public abstract class Entity {
 	protected static final String DASH = "-";
 	
 	private Integer id;
+	
+	public Entity() {
+		id = -1;
+	}
+	
+	public Entity(Entity e) {
+		this.id = e.id;
+	}
 
 	public Integer getId() {
 		return id;
