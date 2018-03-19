@@ -1,6 +1,5 @@
 package by.grsu.edu.dimav.onlinestore.dao;
 
-import by.grsu.edu.dimav.onlinestore.entities.Admin;
 
 public class AppTest {
 

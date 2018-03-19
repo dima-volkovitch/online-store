@@ -17,38 +17,38 @@ public class AdminDaoTest {
 		adminDao = new AdminDao(XML_PATH);
 	}
 
-////	@Test
-//	public void testSaveNew() {
-//		System.out.println("Start 'save' test for admin");
-//		Admin admin = saveAdmin();
-//		Assert.assertNotNull(adminDao.get(admin.getId()));
-////	}
-//
-//	@Test
-//	public void testUpdate() {
-//		System.out.println("Start 'update' test for admin");
-//		Admin admin = saveAdmin();
-//		admin.setContactNumber("00000000000");
-//		adminDao.update(admin);
-//		Assert.assertEquals(admin, adminDao.get(admin.getId()));
-//	}
-//
-//	@Test
-//	public void testGetAll() {
-//		System.out.println("Start 'getAll' test for admin");
-//		final int initialRowsCount = adminDao.getAll().size();
-//		saveAdmin();
-//		Assert.assertEquals(adminDao.getAll().size(), initialRowsCount + 1);
-//	}
+	@Test
+	public void testSaveNew() {
+		System.out.println("Start 'save' test for admin");
+		Admin admin = saveAdmin();
+		Assert.assertNotNull(adminDao.get(admin.getId()));
+	}
+
+	@Test
+	public void testUpdate() {
+		System.out.println("Start 'update' test for admin");
+		Admin admin = saveAdmin();
+		admin.setContactNumber("00000000000");
+		adminDao.update(admin);
+		Assert.assertEquals(admin, adminDao.get(admin.getId()));
+	}
+
+	@Test
+	public void testGetAll() {
+		System.out.println("Start 'getAll' test for admin");
+		final int initialRowsCount = adminDao.getAll().size();
+		saveAdmin();
+		Assert.assertEquals(adminDao.getAll().size(), initialRowsCount + 1);
+	}
 
 	@Test
 	public void testDelete() {
 		System.out.println("Start 'delete' test for admin");
 		Admin admin = saveAdmin();
 		//System.out.println(admin.getId());
-		adminDao.delete(14);
+		adminDao.delete(admin.getId());
 		
-		Assert.assertNull(adminDao.get(14));
+		Assert.assertNull(adminDao.get(admin.getId()));
 	}
 
 	private static Admin saveAdmin() {
