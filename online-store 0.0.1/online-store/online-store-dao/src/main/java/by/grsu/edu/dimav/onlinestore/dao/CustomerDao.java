@@ -11,7 +11,6 @@ public class CustomerDao extends AbstractDao<CustomerTable, Customer> {
 		super(rootFolderPath);
 	}
 
-	@Override
 	public void saveNew(Customer entity) {
 		entity.setId(getNextId());
 		final CustomerTable table = deserializeFromXml();
@@ -19,7 +18,6 @@ public class CustomerDao extends AbstractDao<CustomerTable, Customer> {
 		serializeToXml(table);
 	}
 
-	@Override
 	public void update(Customer entity) {
 		final CustomerTable table = deserializeFromXml();
 		for (final Customer customer : table.getRows()) {
@@ -38,7 +36,6 @@ public class CustomerDao extends AbstractDao<CustomerTable, Customer> {
 		serializeToXml(table);
 	}
 
-	@Override
 	public Customer get(Integer id) {
 		final CustomerTable table = deserializeFromXml();
 		for (final Customer a : table.getRows()) {
@@ -49,12 +46,10 @@ public class CustomerDao extends AbstractDao<CustomerTable, Customer> {
 		return null;
 	}
 
-	@Override
 	public List<Customer> getAll() {
 		return deserializeFromXml().getRows();
 	}
 
-	@Override
 	public void delete(Integer id) {
 		Customer toBeDeleted = null;
 		final CustomerTable table = deserializeFromXml();
@@ -68,7 +63,6 @@ public class CustomerDao extends AbstractDao<CustomerTable, Customer> {
 		serializeToXml(table);
 	}
 
-	@Override
 	protected Class<CustomerTable> getTableClass() {
 		return CustomerTable.class;
 	}

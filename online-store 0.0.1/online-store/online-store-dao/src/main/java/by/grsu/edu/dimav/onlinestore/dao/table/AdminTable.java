@@ -5,7 +5,7 @@ import java.util.List;
 
 import by.grsu.edu.dimav.onlinestore.entities.Admin;
 
-public class AdminTable extends AbstractTable<Admin>{
+public class AdminTable extends AbstractTable<Admin> {
 	private static final long serialVersionUID = 7441451864974749220L;
 
 	private List<Admin> rows;

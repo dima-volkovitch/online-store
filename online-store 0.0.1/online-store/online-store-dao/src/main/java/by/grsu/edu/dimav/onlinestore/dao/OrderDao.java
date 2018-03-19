@@ -11,7 +11,6 @@ public class OrderDao extends AbstractDao<OrderTable, Order> {
 		super(rootFolderPath);
 	}
 
-	@Override
 	public void saveNew(Order entity) {
 		entity.setId(getNextId());
 		final OrderTable table = deserializeFromXml();
@@ -19,7 +18,6 @@ public class OrderDao extends AbstractDao<OrderTable, Order> {
 		serializeToXml(table);
 	}
 
-	@Override
 	public void update(Order entity) {
 		final OrderTable table = deserializeFromXml();
 		for (final Order order : table.getRows()) {
@@ -32,7 +30,6 @@ public class OrderDao extends AbstractDao<OrderTable, Order> {
 		serializeToXml(table);
 	}
 
-	@Override
 	public Order get(Integer id) {
 		final OrderTable table = deserializeFromXml();
 		for (final Order a : table.getRows()) {
@@ -43,12 +40,10 @@ public class OrderDao extends AbstractDao<OrderTable, Order> {
 		return null;
 	}
 
-	@Override
 	public List<Order> getAll() {
 		return deserializeFromXml().getRows();
 	}
 
-	@Override
 	public void delete(Integer id) {
 		Order toBeDeleted = null;
 		final OrderTable table = deserializeFromXml();
@@ -62,7 +57,6 @@ public class OrderDao extends AbstractDao<OrderTable, Order> {
 		serializeToXml(table);
 	}
 
-	@Override
 	protected Class<OrderTable> getTableClass() {
 		return OrderTable.class;
 	}

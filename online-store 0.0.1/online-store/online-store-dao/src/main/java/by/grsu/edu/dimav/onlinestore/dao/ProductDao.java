@@ -11,7 +11,6 @@ public class ProductDao extends AbstractDao<ProductTable, Product> {
 		super(rootFolderPath);
 	}
 
-	@Override
 	public void saveNew(Product entity) {
 		entity.setId(getNextId());
 		final ProductTable table = deserializeFromXml();
@@ -19,7 +18,6 @@ public class ProductDao extends AbstractDao<ProductTable, Product> {
 		serializeToXml(table);
 	}
 
-	@Override
 	public void update(Product entity) {
 		final ProductTable table = deserializeFromXml();
 		for (final Product product : table.getRows()) {
@@ -32,7 +30,6 @@ public class ProductDao extends AbstractDao<ProductTable, Product> {
 		serializeToXml(table);
 	}
 
-	@Override
 	public Product get(Integer id) {
 		final ProductTable table = deserializeFromXml();
 		for (final Product a : table.getRows()) {
@@ -43,12 +40,10 @@ public class ProductDao extends AbstractDao<ProductTable, Product> {
 		return null;
 	}
 
-	@Override
 	public List<Product> getAll() {
 		return deserializeFromXml().getRows();
 	}
 
-	@Override
 	public void delete(Integer id) {
 		Product toBeDeleted = null;
 		final ProductTable table = deserializeFromXml();
@@ -62,7 +57,6 @@ public class ProductDao extends AbstractDao<ProductTable, Product> {
 		serializeToXml(table);
 	}
 
-	@Override
 	protected Class<ProductTable> getTableClass() {
 		return ProductTable.class;
 	}

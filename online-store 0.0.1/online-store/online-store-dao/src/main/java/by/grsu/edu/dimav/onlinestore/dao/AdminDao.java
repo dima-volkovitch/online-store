@@ -10,8 +10,7 @@ public class AdminDao extends AbstractDao<AdminTable, Admin> {
 	public AdminDao(final String rootFolderPath) {
 		super(rootFolderPath);
 	}
-
-	@Override
+	
 	public void saveNew(Admin entity) {
 		entity.setId(getNextId());
 		final AdminTable table = deserializeFromXml();
@@ -19,7 +18,7 @@ public class AdminDao extends AbstractDao<AdminTable, Admin> {
 		serializeToXml(table);
 	}
 
-	@Override
+
 	public void update(Admin entity) {
 		final AdminTable table = deserializeFromXml();
 		for (final Admin admin : table.getRows()) {
@@ -36,37 +35,39 @@ public class AdminDao extends AbstractDao<AdminTable, Admin> {
 		serializeToXml(table);
 	}
 
-	@Override
+
 	public Admin get(Integer id) {
 		final AdminTable table = deserializeFromXml();
 		for (final Admin admin : table.getRows()) {
 			if (admin.getId().equals(id)) {
+				System.out.println(admin.getId());
 				return admin;
 			}
 		}
 		return null;
 	}
 
-	@Override
+
 	public List<Admin> getAll() {
 		return deserializeFromXml().getRows();
 	}
 
-	@Override
+
 	public void delete(Integer id) {
 		Admin toBeDeleted = null;
 		final AdminTable table = deserializeFromXml();
 		for (Admin admin : table.getRows()) {
 			if (admin.getId().equals(id)) {
 				toBeDeleted = admin;
+				System.out.println("FOUND");
 				break;
 			}
 		}
 		table.getRows().remove(toBeDeleted);
+		System.out.println(table.getRows().contains(toBeDeleted));
 		serializeToXml(table);
 	}
 
-	@Override
 	protected Class<AdminTable> getTableClass() {
 		return AdminTable.class;
 	}

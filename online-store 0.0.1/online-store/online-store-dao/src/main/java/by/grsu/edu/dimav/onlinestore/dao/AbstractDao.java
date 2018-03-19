@@ -83,15 +83,16 @@ public abstract class AbstractDao<T extends AbstractTable<E>, E> implements IXml
 		return rootFolderPath;
 	}
 	
-	private int getMaxId() throws IOException {
-		return ((AbstractTable<E>)deserializeFromXml()).getMaxId();
-	}
+//	private int getMaxId() throws IOException {
+//		return ((AbstractTable<E>)deserializeFromXml()).getMaxId();
+//	}
 	
-	protected int getNextId() {
-		try {
-			return getMaxId() + 1;
-		} catch (Exception e) {
-			return -1;
-		}
+	protected Integer getNextId() {
+//		try {
+//			return getMaxId() + 1;
+//		} catch (Exception e) {
+//			return -1;
+//		}
+		return new Integer((int) System.nanoTime());
 	}
 }

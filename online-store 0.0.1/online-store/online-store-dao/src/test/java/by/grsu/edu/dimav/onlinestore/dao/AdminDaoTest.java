@@ -45,17 +45,20 @@ public class AdminDaoTest {
 	public void testDelete() {
 		System.out.println("Start 'delete' test for admin");
 		Admin admin = saveAdmin();
+		//System.out.println(admin.getId());
 		adminDao.delete(admin.getId());
+		
 		Assert.assertNull(adminDao.get(admin.getId()));
 	}
 
 	private static Admin saveAdmin() {
 		Admin admin = new Admin();
-		admin.setId(1);
-		admin.setLogin("Vol40K");
+	//	admin.setId(1);
+		admin.setLogin("delete");
 		admin.setContactNumber("37529684615");
 		admin.setEmail("emailtest");
 		adminDao.saveNew(admin);
+		System.out.println(admin.getId());
 		return admin;
 	}
 }
