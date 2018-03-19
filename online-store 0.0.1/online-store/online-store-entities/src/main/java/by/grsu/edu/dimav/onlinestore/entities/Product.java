@@ -7,6 +7,8 @@ public class Product extends Entity {
 	
 	private Integer quantityInStock;
 	
+	private Integer productPrice;
+	
 	public Product() {
 		
 	}
@@ -40,6 +42,14 @@ public class Product extends Entity {
 
 	public void setQuantityInStock(Integer quantityInStock) {
 		this.quantityInStock = quantityInStock;
+	}
+
+	public Integer getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(Integer productPrice) {
+		this.productPrice = productPrice;
 	}
 	
 	@Override

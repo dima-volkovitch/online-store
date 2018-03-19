@@ -16,5 +16,21 @@
       <description>00000000000</description>
       <id>4</id>
     </by.grsu.edu.dimav.onlinestore.entities.Product>
+    <by.grsu.edu.dimav.onlinestore.entities.Product>
+      <description>some test description</description>
+      <id>5</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Product>
+    <by.grsu.edu.dimav.onlinestore.entities.Product>
+      <description>some test description</description>
+      <id>6</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Product>
+    <by.grsu.edu.dimav.onlinestore.entities.Product>
+      <description>some test description</description>
+      <id>7</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Product>
+    <by.grsu.edu.dimav.onlinestore.entities.Product>
+      <description>00000000000</description>
+      <id>8</id>
+    </by.grsu.edu.dimav.onlinestore.entities.Product>
   </rows>
 </by.grsu.edu.dimav.onlinestore.dao.table.ProductTable>

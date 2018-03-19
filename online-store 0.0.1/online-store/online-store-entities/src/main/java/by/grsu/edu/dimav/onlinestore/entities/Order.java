@@ -8,6 +8,8 @@ public class Order extends Entity {
 	private Product product;
 
 	private Admin admin;
+	
+	private Integer orderPrice;
 
 	public Order() {
 
@@ -42,6 +44,14 @@ public class Order extends Entity {
 
 	public void setAdmin(Admin admin) {
 		this.admin = admin;
+	}
+	
+	public Integer getOrderPrice() {
+		return orderPrice;
+	}
+
+	public void setOrderPrice(Integer orderPrice) {
+		this.orderPrice = orderPrice;
 	}
 
 	@Override

@@ -8,15 +8,23 @@ public class Customer extends User {
 	
 	private List<Product> basket;
 	
+	private Double balance;
+	
+	private Boolean isBlocked;
+	
 	public Customer() {
 		this.orders = new LinkedList<Order>();
-		this.setBasket(new LinkedList<Product>());
+		this.basket = new LinkedList<Product>();
+		this.setBlock(false);
+		this.balance = 0.0;
 	}
 	
 	public Customer(Customer customer) {
 		super(customer);
 		this.orders = customer.orders;
 		this.basket = customer.basket;
+		this.isBlocked = false;
+		this.balance = 0.0;
 	}
 
 	public List<Order> getOrders() {
@@ -49,5 +57,21 @@ public class Customer extends User {
 	
 	public boolean removeProduct(Product p) {
 		return basket.remove(p);
+	}
+	
+	public Boolean isBlocked() {
+		return isBlocked;
+	}
+
+	public void setBlock(Boolean isBlocked) {
+		this.isBlocked = isBlocked;
+	}
+
+	public Double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(Double balance) {
+		this.balance = balance;
 	}
 }

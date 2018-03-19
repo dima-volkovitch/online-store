@@ -9,7 +9,7 @@ public class AppTest {
 	private static AdminDao adminDao = new AdminDao(XML_PATH);
 
 	public static void main(String[] args) {
-		adminDao.delete(5);;
+		adminDao.delete(14);;
 
 	}
 
